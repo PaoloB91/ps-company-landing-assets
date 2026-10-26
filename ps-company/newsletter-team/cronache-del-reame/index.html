@@ -130,6 +130,7 @@
     box-shadow: inset 0 0 0 2px rgba(255,255,255,.12), 0 2px 4px rgba(0,0,0,.25);
   }
   .pg-nome { font-family: "Cinzel", serif; font-weight: 700; font-size: 15px; }
+  .pg-ruolo { font-family: "Cinzel", serif; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--inchiostro-chiaro); margin-top: 1px; }
   .pg-titolo { font-style: italic; color: var(--sangue); font-size: 15px; line-height: 1.3; }
   .pg-nota { font-size: 16px; line-height: 1.4; margin-top: 2px; }
   .segno { font-family: "IM Fell English", serif; font-weight: 400; font-style: italic; font-size: 12px; color: var(--inchiostro-chiaro); border: 1px solid rgba(107,82,54,.5); padding: 0 6px; border-radius: 2px; margin-left: 4px; white-space: nowrap; display: inline-block; }
@@ -234,13 +235,13 @@ const CASATE = [
       "La corte è affollata e i corvi partono a decine ogni giorno. Di recente un corvo è partito due volte nello stesso quarto d'ora: la seconda volta con la versione giusta del documento."
     ],
     personaggi: [
-      { nome: "Fulvio", titolo: "Re sul Trono di Booster", nota: "Dal suo consiglio escono i piani che tutto il reame poi deve seguire." },
-      { nome: "Alessandra", titolo: "Maestra dei Menestrelli", nota: "Tiene le redini della comunità e dei creator sparsi per il reame, e decide con che tono si parla al popolo." },
-      { nome: "Virginia", titolo: "La Mano dalle Mille Mansioni", nota: "Comunicazione, insegne, corvi verso tutte le casate: se qualcosa si muove ad Approdo, è passato dalle sue mani." },
-      { nome: "Elisa", titolo: "Signora dei Tornei", nota: "Ultima parola su ogni torneo del reame, da Genova alle terre più lontane." },
-      { nome: "Massimo", titolo: "Mastro dei Commerci", nota: "Tratta con i mercanti e fa partire i carri di cartoncino verso ogni porto." },
-      { nome: "Elisabetta", titolo: "Maestra delle Insegne", nota: "Guida la bottega dei pittori di corte: stendardi, carte e stemmi passano da lei." },
-      { nome: "Guy", titolo: "Il Nuovo Arrivato, detto Corvo Doppio", nota: "Al suo esordio ha mandato i documenti del torneo e, un quarto d'ora dopo, la versione giusta. La corte lo ha accolto con affetto.", nuovo: true }
+      { nome: "Fulvio", ruolo: "Titolare, direzione marketing e strategia", titolo: "Re sul Trono di Booster", nota: "Siede sul Trono e tiene la Volpe al guinzaglio. Dal suo consiglio escono i piani che tutto il reame poi deve seguire." },
+      { nome: "Alessandra", ruolo: "Communication & Community Manager", titolo: "Maestra dei Menestrelli", nota: "Tiene le redini del popolo dei giocatori e della compagnia di menestrelli (i creator) sparsa per il reame, e decide con che tono la corona parla alle piazze." },
+      { nome: "Virginia", ruolo: "Communication & Graphic Specialist", titolo: "La Mano dalle Mille Mansioni", nota: "Insegne, proclami, corvi verso tutte le casate: se qualcosa si muove ad Approdo del Booster, è passato dalle sue mani. Spesso tutto insieme." },
+      { nome: "Elisa", ruolo: "Responsabile mondiale Organized Play", titolo: "Signora dei Tornei", nota: "Ultima parola su ogni giostra e torneo del reame, da Genova alle terre più lontane. I cavalieri di Altogiardino organizzano, ma le regole le scrive lei." },
+      { nome: "Massimo", ruolo: "Responsabile commerciale", titolo: "Mastro dei Commerci", nota: "Tratta con i mercanti di ogni porto e fa partire i carri di cartoncino. Quando un regno lontano chiede campioni, è lui che li imbarca." },
+      { nome: "Elisabetta", ruolo: "Art direction e grafica", titolo: "Maestra delle Insegne", nota: "Guida la bottega dei pittori di corte: stendardi, carte e stemmi passano dal suo pennello prima di vedere la luce." },
+      { nome: "Guy", ruolo: "Nuovo arrivo", titolo: "Il Novizio, detto Corvo Doppio", nota: "Al suo esordio ha spedito i documenti del torneo e, un quarto d'ora dopo, un secondo corvo con la versione giusta. La corte lo ha accolto con affetto.", nuovo: true }
     ]
   },
   {
@@ -262,20 +263,20 @@ const CASATE = [
       "Rispondono ai corvi dei giocatori, tengono in ordine le pagine del regno, portano gli annunci fino alle Terre del Tramonto. Dall'ottobre del 2026 siedono al consiglio ristretto del Trono come Primi Cavalieri del marketing."
     ],
     personaggi: [
-      { nome: "Paolo", titolo: "Lord di Grande Nebbia, Primo Cavaliere", nota: "Tiene i rapporti con il Trono e risponde ai corvi dei mercanti di quattro regni." },
-      { nome: "Paolo Romano", titolo: "Custode dei Token", nota: "Maestro delle arti arcane. Insegna al branco a usare i token e passa il resto del tempo a recuperare quelli che il branco spreca." },
-      { nome: "Paride", titolo: "Maestro del Calendario e dei Menestrelli", nota: "Tiene il calendario del reame e la conta dei menestrelli, che gli devono rapporto ogni lunedì entro le dieci." },
-      { nome: "Dario", titolo: "La Voce del Popolo", nota: "Risponde ai corvi dei giocatori, anche a quelli furiosi per una carta storta, e parla al popolo nella lingua comune." },
-      { nome: "Alice", titolo: "Architetta delle Mura", nota: "Costruisce e ridisegna le mura del sito del regno, pietra dopo pietra." }
+      { nome: "Paolo", ruolo: "Titolare, coordinamento e strategia", titolo: "Lord di Grande Nebbia, Primo Cavaliere", nota: "Siede al consiglio ristretto del Trono e risponde ai corvi dei mercanti di quattro regni. Quando c'è da guidare il branco fuori dalla nebbia, va davanti." },
+      { nome: "Paolo Romano", ruolo: "Socio e responsabile IT", titolo: "Custode dei Token", nota: "Maestro delle arti arcane. Insegna al branco a evocare gli spiriti delle macchine e passa il resto del tempo a raccogliere i token che il branco semina per strada." },
+      { nome: "Paride", ruolo: "Advertising, creator e calendario marketing", titolo: "Maestro di Campo e dei Menestrelli", nota: "Guida la cavalleria degli annunci e tiene la conta dei menestrelli, che gli devono rapporto ogni lunedì entro le dieci. Con Paolo ha in mano le armate del Trono." },
+      { nome: "Dario", ruolo: "Customer care, community management e testi del sito", titolo: "La Voce del Popolo", nota: "Risponde ai corvi dei giocatori, anche a quelli furiosi per una carta storta, e parla al popolo nella lingua comune. Ha una pazienza che nemmeno i septon." },
+      { nome: "Alice", ruolo: "Web design", titolo: "Architetta delle Mura", nota: "Costruisce e ridisegna le mura del sito del regno, pietra dopo pietra, e le fa crollare solo quando c'è da rifarle più belle." }
     ]
   },
   {
     id: "breakflyrell",
     nome: "Casa Breakflyrell",
     vera: "Breakflip",
-    seggio: "Altogiardino-sur-Seine",
-    citta: "Parigi",
-    coord: [2.35, 48.86],
+    seggio: "Altogiardino-sur-Loire",
+    citta: "Saint-Cyr-sur-Loire",
+    coord: [0.67, 47.40],
     etichetta: { dx: 0, dy: 40, anchor: "middle" },
     colori: { campo: "#2f5a35", figura: "#e2bd57", bordo: "#c9a14a" },
     sigillo: "rosa",
@@ -289,17 +290,17 @@ const CASATE = [
       "Di recente il Trono ha ridisegnato alcuni dei loro confini. Restano a corte, con qualche giardino in meno."
     ],
     personaggi: [
-      { nome: "Thomas", titolo: "Lord di Altogiardino", nota: "Signore della casata. Non manca mai a un consiglio." },
-      { nome: "Nathan", titolo: "Gran Maestro delle Botteghe", nota: "Segue le botteghe e i mercanti di Francia, e i carri che le riforniscono." },
-      { nome: "Guillaume", titolo: "Maestro d'Armi dei Tornei", nota: "Organizza i tornei e prepara i forzieri dei premi, con regole d'imballo precise al millimetro." },
-      { nome: "Elise", titolo: "Voce di Altogiardino", nota: "Parla al popolo di Francia e cura le sfilate per immagini." }
+      { nome: "Thomas", ruolo: "CEO", titolo: "Lord di Altogiardino", nota: "Siede a capo della casata delle rose. Come ogni lord di Altogiardino, a un consiglio non manca mai." },
+      { nome: "Nathan", ruolo: "Project Manager e gestione commerciale", titolo: "Gran Maestro delle Rotte", nota: "Tiene le rotte dei mercanti da un capo all'altro del continente: non solo le botteghe di Francia, ma quelle di tutta Europa. Le sue carovane arrivano fino alle terre oltre il Mare del Tramonto, dove però tiene banco un'altra compagnia. Ve la presenteremo nel prossimo capitolo." },
+      { nome: "Guillaume", ruolo: "Responsabile Organized Play", titolo: "Maestro d'Armi dei Tornei", nota: "Allestisce le giostre del reame e prepara i forzieri dei premi, con regole d'imballo precise al millimetro." },
+      { nome: "Elise", ruolo: "Social Media Manager", titolo: "La Cantastorie di Altogiardino", nota: "Racconta le gesta del reame al popolo di Francia, su ogni piazza e a ogni ora, e mette in scena le sfilate per immagini. Se una notizia gira per i borghi della Loira, l'ha cantata lei." }
     ]
   },
   {
     id: "zvezdreyne",
     nome: "Casa Zvezdreyne",
     vera: "Zvezdar",
-    seggio: "Lubjamere",
+    seggio: "Stellamere",
     citta: "Lubiana",
     coord: [14.5, 46.05],
     etichetta: { dx: 0, dy: -50, anchor: "middle" },
@@ -313,11 +314,11 @@ const CASATE = [
     parallelo: [
       "Un tempo potentissimi: dal loro seggio oltre la Barriera tenevano le chiavi del marketing di tutto il reame e dei commerci oltre i mari.",
       "Come i Reyne di Castamere, contavano di durare in eterno. Poi il vento è cambiato. Persino il loro sigillo sui pagamenti è stato sostituito.",
-      "Oggi le sale di Lubjamere sono vuote e i bardi, la sera, cantano Le piogge di Lubjamere."
+      "Oggi le sale di Stellamere sono vuote e i bardi, la sera, cantano Le piogge di Stellamere."
     ],
     personaggi: [
-      { nome: "Tilen", titolo: "Ultimo Signore di Lubjamere", nota: "Teneva le chiavi del marketing di tutto il reame. Il suo seggio al consiglio oggi è vuoto.", partito: true },
-      { nome: "Gregory", titolo: "Il Mercante Errante", nota: "Apriva le porte delle grandi fiere e dei commerci importanti.", partito: true }
+      { nome: "Tilen", ruolo: "CEO", titolo: "Ultimo Signore di Stellamere", nota: "Teneva le chiavi del marketing di tutto il reame e i registri dei commerci oltre i mari. Il suo seggio al consiglio oggi è vuoto.", partito: true },
+      { nome: "Gregory", ruolo: "Commerciale e grandi attivazioni", titolo: "Il Mercante Errante", nota: "Viaggiava di fiera in fiera aprendo le porte dei commerci più importanti. Le ultime notizie lo danno su altre strade.", partito: true }
     ]
   }
 ];
@@ -329,8 +330,8 @@ const CAPITOLI = [
     titolo: "Di come la Casa della Nebbia salì al Consiglio",
     paragrafi: [
       "Nell'anno del Cartoncino 2026, quando a Carpi la nebbia tornava a posarsi sui campi, un corvo partì da Approdo del Booster diretto alla Bassa. Non portava guerra. Portava un incarico: da quel giorno il marketing del reame passa per Grande Nebbia.",
-      "Non è successo per caso. Nelle lune precedenti, mentre altre casate tenevano banchetti, la gente di PStark rispondeva ai corvi dei giocatori, sistemava le pagine del regno e portava gli annunci fino alle Terre del Tramonto. Intanto a Lubjamere si spegnevano le torce e ad Altogiardino si ridisegnavano i confini. Noi eravamo lì, e ci siamo ancora.",
-      "Quando arriva il fine mese, il lupo solitario muore, ma il branco sopravvive. Questo capitolo è per il branco: grazie a ognuno di voi."
+      "Non è successo per caso. Nelle lune precedenti, mentre altre casate tenevano banchetti, la gente di PStark rispondeva ai corvi dei giocatori, sistemava le pagine del regno e portava gli annunci fino alle Terre del Tramonto. Intanto a Stellamere si spegnevano le torce e ad Altogiardino si ridisegnavano i confini. Noi eravamo lì, e ci siamo ancora.",
+      "Quando arriva il fine mese, il lupo solitario muore, ma il branco sopravvive."
     ],
     morale: "Il lavoro fatto bene, prima o poi, paga. Anche nella Bassa.",
     firma: "Dal Maestro delle Cronache, Grande Nebbia"
@@ -490,7 +491,7 @@ geoCurva("c-barriera", [6.0, 47.1], [9.5, 47.9], [13.0, 47.4]);
 testoCurvo("LA BARRIERA", "c-barriera", "regione");
 geo("(sì, sono le Alpi)", [9.6, 47.15], "nota-mappa");
 
-geo("LA PIANA DEI TORNEI", [2.6, 46.9], "regione");
+geo("LA PIANA DEI TORNEI", [1.4, 45.4], "regione");
 geo("DORNE", [-3.3, 40.6], "regione");
 geo("TERRE DEI DISTRIBUTORI", [11.5, 50.2], "regione");
 geo("(inesplorate)", [11.5, 49.85], "nota-mappa");
@@ -650,6 +651,7 @@ function mostraCasa(id) {
           <span class="medaglione" style="background:${c.colori.campo};color:${c.colori.figura};border-color:${c.colori.bordo}">${p.nome.split(" ").map(s => s[0]).join("")}</span>
           <div>
             <div class="pg-nome">${p.nome}${p.nuovo ? ' <span class="segno">nuovo a corte</span>' : ""}${p.partito ? ' <span class="segno">partito per altre terre</span>' : ""}</div>
+            <div class="pg-ruolo">${p.ruolo}</div>
             <div class="pg-titolo">${p.titolo}</div>
             <div class="pg-nota">${p.nota}</div>
           </div>
